@@ -14,7 +14,7 @@ export const otpHash = (id: string, code: string) => digest(`otp:${id}:${code}`)
 export const randomId = (bytes = 24) => crypto.randomBytes(bytes).toString("base64url");
 export const normalizeIranPhone = (value: string) => { const compact = value.replace(/[\s()-]/g, ""); const normalized = compact.startsWith("+98") ? compact : compact.startsWith("0098") ? `+${compact.slice(2)}` : compact.startsWith("09") ? `+98${compact.slice(1)}` : compact.startsWith("9") ? `+98${compact}` : compact; return /^\+989\d{9}$/.test(normalized) ? normalized : null; };
 export const mask = (value: string, method: "email" | "sms") => method === "sms" ? `${value.slice(0, 4)} *** ${value.slice(-4)}` : `${value[0]}••••${value.slice(value.indexOf("@") - 1)}${value.slice(value.indexOf("@"))}`;
-export const getState = (key: string) => redis(["GET", key]);
+export const getState = async (key: string) => { const value = await redis(["GET", key]); if (typeof value !== "string") return value; try { return JSON.parse(value) as unknown; } catch { return null; } };
 export const setState = (key: string, value: unknown, ttl: number) => redis(["SET", key, JSON.stringify(value), "EX", ttl]);
 export const delState = (key: string) => redis(["DEL", key]);
 export async function sendSms(phone: string, code: string) {
@@ -26,7 +26,7 @@ export async function sendSms(phone: string, code: string) {
   } else {
     const username = env("SMS_USERNAME"); const line = env("SMS_LINE_NUMBER");
     if (!username || !line) throw new Error("SMS.ir generic sender is not configured");
-    const query = new URLSearchParams({ username, password: apiKey, mobile: phone, line, text: `کد تأیید اشکان گیوکی: ${code}` });
+    const query = new URLSearchParams({ username, password: apiKey, mobile: phone, line, text: `کد تأیید اشکان گیوه‌کی: ${code}` });
     response = await fetch(`https://api.sms.ir/v1/send?${query.toString()}`, { headers: { Accept: "text/plain" } });
   }
   if (!response.ok) throw new Error("SMS provider failed");
