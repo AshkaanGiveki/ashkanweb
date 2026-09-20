@@ -19,8 +19,16 @@ export const setState = (key: string, value: unknown, ttl: number) => redis(["SE
 export const delState = (key: string) => redis(["DEL", key]);
 export async function sendSms(phone: string, code: string) {
   const apiKey = env("SMS_API_KEY"); const template = Number(env("SMS_VERIFY_TEMPLATE"));
-  if (!apiKey || !template) throw new Error("SMS.ir is not configured");
-  const response = await fetch("https://api.sms.ir/v1/send/verify", { method: "POST", headers: { "Content-Type": "application/json", "x-api-key": apiKey }, body: JSON.stringify({ Mobile: phone, TemplateId: template, Parameters: [{ Name: "CODE", Value: code }] }) });
+  if (!apiKey) throw new Error("SMS.ir is not configured");
+  let response: Response;
+  if (template) {
+    response = await fetch("https://api.sms.ir/v1/send/verify", { method: "POST", headers: { "Content-Type": "application/json", "x-api-key": apiKey }, body: JSON.stringify({ Mobile: phone, TemplateId: template, Parameters: [{ Name: "CODE", Value: code }] }) });
+  } else {
+    const username = env("SMS_USERNAME"); const line = env("SMS_LINE_NUMBER");
+    if (!username || !line) throw new Error("SMS.ir generic sender is not configured");
+    const query = new URLSearchParams({ username, password: apiKey, mobile: phone, line, text: `کد تأیید اشکان گیوکی: ${code}` });
+    response = await fetch(`https://api.sms.ir/v1/send?${query.toString()}`, { headers: { Accept: "text/plain" } });
+  }
   if (!response.ok) throw new Error("SMS provider failed");
 }
 export async function sendEmail() { throw new Error("Email provider is not configured"); }
