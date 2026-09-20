@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function sitemap():MetadataRoute.Sitemap{return["en","fa","fr","ar"].map(locale=>({url:`https://ashkanweb.vercel.app/${locale}`,lastModified:new Date(),changeFrequency:"monthly",priority:1}))}
