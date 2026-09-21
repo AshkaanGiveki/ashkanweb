@@ -1,3 +1,10 @@
+/* AI-generated project art: one contact sheet, cropped to the matching quadrant. */
+#projects .thumb{background-image:url('/images/projects/featured-projects.png')!important;background-size:200% 200%!important;background-repeat:no-repeat!important}
+#projects .green .thumb{background-position:0 0!important;color:#fff}
+#projects .light .thumb{background-position:100% 0!important;color:#142020}
+#projects .blue .thumb{background-position:0 100%!important;color:#fff}
+#projects .peach .thumb{background-position:100% 100%!important;color:#372937}
+
 @media (min-width:801px) and (max-width:900px){
   #projects{height:358px;padding-top:27px;padding-bottom:29px;overflow:hidden}
   #projects>h2{display:none}
@@ -21,4 +28,68 @@
   .skills .skillgrid span{font-size:7px!important;padding:10px 2px!important;height:59px!important;line-height:10px!important}
   .skills .skillgrid .brand-icon{width:18px!important;height:18px!important;display:block;margin:0 auto 4px}
   main>section#contact{grid-template-columns:40% 54%!important;gap:34px!important}
+}
+
+@media (max-width:800px){
+  header,main>section,footer{padding-inline:20px}
+  header{height:64px}
+  .brand{font-size:10px}
+  nav{display:none}
+  .headtools select{font-size:11px;padding:6px 9px}
+  .hamb{display:block;font-size:0;width:31px;height:31px;padding:0}
+  .hamb:after{content:'☰';font-size:16px}
+  .hero{height:760px;min-height:760px;padding-top:52px}
+  .heroCopy{padding-block:0;max-width:100%}
+  .hero h1{font-size:47px;line-height:.98;max-width:340px}
+  .hero .lede{font-size:13px;line-height:1.55;max-width:330px}
+  .actions{display:grid!important;gap:10px;max-width:100%}.actions .btn{justify-content:center;width:100%!important;padding:13px 18px}
+  .facts{margin-top:30px;gap:12px;justify-content:space-between}.facts span{flex:1;padding-inline-end:10px;font-size:9px}.facts b{font-size:17px}
+  .heroImg{inset-inline:0;inset-block:auto 0;height:350px;opacity:1}.heroImg img{object-position:center;filter:brightness(.54) saturate(.8)}.heroImg:before{background:linear-gradient(0deg,var(--bg) 0%,#08111355 45%,#081113dd 100%)}
+  .section{padding-block:68px}
+  #about{height:auto;display:block;padding-block:34px 42px}
+  #about h2{font-size:37px;margin:16px 0 24px;max-width:280px}
+  #about .aboutcopy{font-size:13px;line-height:1.6;margin:0 0 28px}
+  #about .about-meta{font-size:10px;white-space:normal}
+  #about .orbit{width:145px;height:145px;margin:auto;padding:46px 34px}
+  #projects{height:auto;padding-block:34px 44px}
+  #projects>h2{display:none}
+  #projects .projects{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+  #projects .project{display:block;height:auto;padding-bottom:14px}
+  #projects .thumb{height:184px!important;margin:-1px -1px 14px;padding:18px}
+  #projects .thumb b{font-size:17px}#projects .thumb span{font-size:15px;line-height:1.1}
+  #projects .project h3{font-size:18px;margin-top:0;margin-bottom:7px}
+  #projects .project>p{font-size:12px;line-height:1.5;min-height:0;margin-bottom:12px}
+  #projects .tags i{font-size:9px;padding:5px 7px}
+  .skills{height:auto;display:block;padding-block:36px 42px}
+  .skills h2{font-size:32px;margin:14px 0 26px;max-width:310px}
+  .skills .skillgrid{grid-template-columns:repeat(3,1fr);height:auto;margin-top:0}
+  .skills .skillgrid span{font-size:9px!important;padding:14px 4px!important;height:74px!important;line-height:12px!important}
+  .skills .skillgrid .brand-icon{width:20px!important;height:20px!important;margin-bottom:6px}
+  #experience{height:auto;padding-block:38px 56px}
+  #experience .timeline{margin-inline-start:12px;padding-inline-start:26px;gap:24px}
+  #experience .timeline article{height:auto;min-height:39px}
+  #experience .timeline small{display:block;font-size:10px;margin-bottom:5px}
+  #experience .timeline h3{font-size:13px}#experience .timeline b{font-size:10px}
+  #experience .timeline p{display:none}
+  #experience .timeline i{inset-inline-start:-31px;width:8px;height:8px}
+  .contact{height:auto;display:block;padding-block:38px 46px}
+  .contact h2{font-size:35px;margin:16px 0 20px;max-width:320px}.contact .lede{font-size:12px}
+  .formbox{padding:18px;margin-top:30px}.formbox form{gap:10px}.formbox input,.formbox textarea{padding:11px}.formbox textarea{min-height:110px}.formbox .method{display:flex}
+  footer{height:auto;min-height:190px;padding-block:32px 24px;display:flex;flex-wrap:wrap;align-items:flex-start;font-size:9px}
+}
+
+/* Match the reference copy while keeping the existing localized content model. */
+@media (min-width:801px){
+  .facts span:nth-child(2) b{font-size:0}.facts span:nth-child(2) b:after{content:'5+';font-size:16px}
+  .facts span:nth-child(2){font-size:0}.facts span:nth-child(2):after{content:'Years of Experience';font-size:9px}
+  .facts span:nth-child(3) b{font-size:0}.facts span:nth-child(3) b:after{content:'10+';font-size:16px}
+  .facts span:nth-child(3){font-size:0}.facts span:nth-child(3):after{content:'Happy Clients';font-size:9px}
+}
+@media (max-width:800px){
+  .facts span:nth-child(1) b{font-size:0}.facts span:nth-child(1) b:after{content:'4+';font-size:17px}
+  .facts span:nth-child(1){font-size:0}.facts span:nth-child(1):after{content:'Years of Experience';font-size:9px}
+  .facts span:nth-child(2) b{font-size:0}.facts span:nth-child(2) b:after{content:'50+';font-size:17px}
+  .facts span:nth-child(2){font-size:0}.facts span:nth-child(2):after{content:'Projects & Improvements';font-size:9px}
+  .facts span:nth-child(3) b{font-size:0}.facts span:nth-child(3) b:after{content:'10+';font-size:17px}
+  .facts span:nth-child(3){font-size:0}.facts span:nth-child(3):after{content:'Happy Clients';font-size:9px}
 }
