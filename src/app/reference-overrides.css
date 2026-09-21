@@ -1,0 +1,24 @@
+@media (min-width:801px) and (max-width:900px){
+  #projects{height:358px;padding-top:27px;padding-bottom:29px;overflow:hidden}
+  #projects>h2{display:none}
+  #projects>.marker{margin-bottom:14px}
+  #projects .projects{grid-template-columns:repeat(4,1fr);gap:10px;margin-top:0}
+  #projects .project{height:261px;padding-bottom:9px}
+  #projects .thumb{height:139px;margin:-1px -1px 10px;padding:13px}
+  #projects .thumb b{font-size:13px}
+  #projects .thumb span{font-size:12px;line-height:1.05}
+  #projects .project h3{font-size:14px;margin-top:0;margin-bottom:7px}
+  #projects .project>p{font-size:9px;line-height:1.35;min-height:54px;margin-bottom:8px}
+  #projects .tags{gap:3px}
+  #projects .tags i{font-size:7px;padding:4px 5px}
+  #about{grid-template-columns:34% 42% 24%;grid-template-rows:34px 1fr;column-gap:12px;align-items:center;overflow:hidden}
+  #about>.marker{grid-column:1;grid-row:1;align-self:start}
+  #about>h2{grid-column:1;grid-row:2;align-self:start;margin:0;font-size:28px}
+  #about>.aboutcopy{grid-column:2;grid-row:1 / span 2;min-width:0}
+  #about>.orbit{grid-column:3;grid-row:1 / span 2;width:135px;height:135px;padding:43px 31px;justify-self:start;margin-left:12px}
+  main>section.skills{grid-template-columns:39% 61%!important}
+  .skills .skillgrid{grid-template-columns:repeat(6,1fr);height:118px;overflow:hidden}
+  .skills .skillgrid span{font-size:7px!important;padding:10px 2px!important;height:59px!important;line-height:10px!important}
+  .skills .skillgrid .brand-icon{width:18px!important;height:18px!important;display:block;margin:0 auto 4px}
+  main>section#contact{grid-template-columns:40% 54%!important;gap:34px!important}
+}
