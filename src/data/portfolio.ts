@@ -9,5 +9,5 @@ export const experiences=[
  ["JUL 2025 — MAR 2026","Full Stack Web Developer","A1 KARA CABLE","Scalable marketplace across Next.js, Node.js, APIs, data, Docker and real-time patterns."],
  ["FEB 2025 — OCT 2025","Full Stack Developer","RAYARASANA","RayaFin and administration tooling using React, Next.js, Express, Prisma and PostgreSQL."],
  ["APR 2023 — PRESENT","Freelance Web Developer","INDEPENDENT","Independent products spanning psychology, commerce, workforce operations and content platforms."],
- ["2021 — 2023","Earlier Engineering Experience","Arad · Freqquency","Engineering research, prototype evaluation, technical testing and product documentation."]
+ ["2021 — 2023","Earlier Engineering Experience","Arad · Freqqquency","Engineering research, prototype evaluation, technical testing and product documentation."]
 ] as const;
