@@ -1,0 +1,10 @@
+name: Deploy to production server
+on:
+  push:
+    branches:
+      - develop
+permissions:
+  contents: read
+jobs:
+  deploy:
+    uses: AshkaanGiveki/server-deploy/.github/workflows/deploy-ashkanweb.yml@main
